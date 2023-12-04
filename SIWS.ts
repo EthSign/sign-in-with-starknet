@@ -26,7 +26,7 @@ const types = {
     { name: "revision", type: "shortstring" },
   ],
   SIWS: [
-    { name: "address", type: "string" },
+    { name: "address", type: "ContractAddress" },
     { name: "statement", type: "string" },
     { name: "uri", type: "string" },
     { name: "nonce", type: "string" },
@@ -36,7 +36,7 @@ const types = {
 };
 
 const provider = new RpcProvider({
-  nodeUrl: process.env.RPC_URL,
+  nodeUrl: process.env.RPC_URL!,
   chainId: constants.StarknetChainId.SN_MAIN,
 });
 
